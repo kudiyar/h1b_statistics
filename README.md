@@ -13,6 +13,8 @@ Your code should be modular and reusable for future. If the newspaper gets data 
 
 # Approach
 
+Raw data is large and we are only interested in subset of the raw data which are the cases where case status is **CERTIFIED**. To do that efficiently without storing the whole data in Python namespace, we will filter only the rows of interest as we are reading the file. In addition, we are not interested in all columns of the data so we will also store the columns of interest for our problem. 
+
 Raw data could be found [here](https://www.foreignlaborcert.doleta.gov/performancedata.cfm) under the __Disclosure Data__ tab (i.e., files listed in the __Disclosure File__ column with ".xlsx" extension). 
 For your convenience we converted the Excel files into a semicolon separated (";") format and placed them into this Google drive [folder](https://drive.google.com/drive/folders/1Nti6ClUfibsXSQw5PUIWfVGSIrpuwyxf?usp=sharing). However, do not feel limited to test your code on only the files we've provided on the Google drive 
 
