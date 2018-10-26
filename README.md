@@ -7,7 +7,7 @@
 
 Historical data for H1B visas are  available from the US Department of Labor and its [Office of Foreign Labor Certification Performance Data](https://www.foreignlaborcert.doleta.gov/performancedata.cfm#dis). But while there are ready-made reports for [2018](https://www.foreignlaborcert.doleta.gov/pdf/PerformanceData/2018/H-1B_Selected_Statistics_FY2018_Q4.pdf) and [2017](https://www.foreignlaborcert.doleta.gov/pdf/PerformanceData/2017/H-1B_Selected_Statistics_FY2017.pdf), the site doesn’t have them for past years. 
 
-We should analyze the past data and do calculations in two metrics: **Top 10 Occupations** and **Top 10 States** for **certified** visa applications.
+Therefore, we should analyze the past data and particularly do calculations in two metrics: **Top 10 Occupations** and **Top 10 States** for **certified** visa applications.
 
 We also want the code to be working for all years and producing the required results.
 
