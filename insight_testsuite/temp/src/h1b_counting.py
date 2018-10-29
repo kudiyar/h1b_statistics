@@ -38,7 +38,7 @@ file = str(sys.argv[1]) # "../input/h1b_input.csv" #
 status = ['CASE_STATUS', 'STATUS'] # STATUS in 2014, CASE STATUS in 2015,2016
 soc_code = ['SOC_NAME', 'LCA_CASE_SOC_NAME']
 job_title = 'JOB_TITLE'
-employer_state = ['WORKSITE_STATE', 'LCA_CASE_WORKLOC1_STATE']#['EMPLOYER_STATE', 'LCA_CASE_EMPLOYER_STATE']
+employer_state = ['WORKSITE_STATE']#['EMPLOYER_STATE', 'LCA_CASE_EMPLOYER_STATE']
 # reading the file
 input_file = open(file, 'r')
 headers = input_file.readline().split(";")
