@@ -35,13 +35,14 @@ for k in range(2):
     variable_list = [data_list[i][k] for i in range(1,l)]
     unique_list = sorted(set(variable_list))
     counts_type = [[variable_list.count(x), unique_list.index(x)] for x in unique_list]
-    ranks = sorted(counts_type, reverse=True) # 
-    ranks_top10 = ranks[0:10]
+    ranks = sorted(counts_type, reverse=True) #
     r = 10
-    # add if there multiple 10th rank
-    while ranks[r][0] == ranks_top10[9][0]:
-        ranks_top10.append(counts_type[r])
-        r += 1
+    if len(ranks) > r:
+        ranks_top10 = ranks[0:10]
+        # add if there multiple 10th rank
+        while ranks[r][0] == ranks_top10[9][0]:
+            ranks_top10.append(counts_type[r])
+            r += 1
     # write top 10 occupations to a file.
     if k == 0:
         file1 = open(str(sys.argv[2]),"w") # open("./output/top_10_2016t_occupations.txt", "w")
