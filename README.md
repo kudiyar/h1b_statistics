@@ -13,9 +13,11 @@ We also want the code to be working for all years and producing the required res
 
 # Approach
 
-Raw data is large and we are only interested in the subset of the raw data which are the cases where case status is **CERTIFIED**. To do that efficiently without storing the whole data in Python namespace(environment), we will filter only the rows of interest as we are reading the file. In addition, we are not interested in all columns of the data so we will also store the columns of interest(job location state and job title) for our problem. 
-After we read all the data, we will find unique strings of variable of interest and sort them. Then, using these unique strings we will count the number of times each string occurs in the data along with the indexes it appears in the unique strings' list. Finally, we sort again to get the sorted list with highest counts being on the top. 
-The last step is to write the sorted lists to *txt* files. 
+Raw data is large and we are only interested in the subset of the raw data which are the cases where case status is **CERTIFIED**. To do that efficiently without storing the whole data in Python namespace(environment), we will filter only the rows of interest as we are reading the file. In addition, we are not interested in all columns of the data so we will also store the columns of interest(job location state and job title) for our problem.
+
+After we read all the data, we will find unique strings of variable of interest and sort them. Then, using these unique strings we will count the number of times each string occurs in the data along with the indexes it appears in the unique strings' list. Finally, we sort again to get the sorted list with highest counts being on the top.
+
+The last step is to write the sorted lists to **txt** files. 
 
 # Run Instructions
-On the command line on a Linux machine
+Using the command line on a Linux machine, you run the same way as in **run.sh** file except for three arguments you have to specify the location of the data file along with its name and locations for output files along with the names you give to the files.
