@@ -5,11 +5,11 @@
 
 # Problem
 
-Historical data for H1B visas are  available from the US Department of Labor and its [Office of Foreign Labor Certification Performance Data](https://www.foreignlaborcert.doleta.gov/performancedata.cfm#dis). While there are summary reports for [2018](https://www.foreignlaborcert.doleta.gov/pdf/PerformanceData/2018/H-1B_Selected_Statistics_FY2018_Q4.pdf) and [2017](https://www.foreignlaborcert.doleta.gov/pdf/PerformanceData/2017/H-1B_Selected_Statistics_FY2017.pdf), the site doesn’t have them for past years. 
+Historical data for H1B visas are  available from the US Department of Labor and its [Office of Foreign Labor Certification Performance Data](https://www.foreignlaborcert.doleta.gov/performancedata.cfm#dis). While there are summary reports for [2018](https://www.foreignlaborcert.doleta.gov/pdf/PerformanceData/2018/H-1B_Selected_Statistics_FY2018_Q4.pdf) and [2017](https://www.foreignlaborcert.doleta.gov/pdf/PerformanceData/2017/H-1B_Selected_Statistics_FY2017.pdf), the site doesn’t have them for previous years. 
 
 Therefore, we should analyze the past data and particularly do calculations in two metrics: **Top 10 Occupations** and **Top 10 States** for **certified** visa applications.
 
-We also want the code to be working for all years and producing the required results.
+We also want the code to be working for past years(2014, 2015 and 2016) and producing the required results.
 
 # Approach
 
@@ -21,3 +21,6 @@ The last step is to write the sorted lists to **txt** files.
 
 # Run Instructions
 Using the command line on a Linux machine, you run the same way as in **run.sh** file except for three arguments you have to specify the location of the data file along with its name and locations for output files along with the names you give to the files.
+
+# Notes
+The code works for **csv** files which are semicolon separated and does not handle other formats such as **xlsx**. Additional work is needed will be done in the future. 
