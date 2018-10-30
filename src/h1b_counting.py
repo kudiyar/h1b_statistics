@@ -20,7 +20,7 @@ status_ind = [headers.index(c) for c in status if c in headers][0] # Status inde
 j_ind = [headers.index(c) for c in soc_name if c in headers][0] # Job index
 state_ind = [headers.index(c) for c in job_state if c in headers][0] # State index
 # reading the rest of the file
-data_list = [[job_title, job_state[0]]]
+data_list = []# [[job_title, job_state[0]]]
 for line in input_file:
     currentline = line.split(";")
     # We will filter only applications which was certified 
@@ -32,7 +32,7 @@ input_file.close()
 l = len(data_list)
 # we will work to get top occupations
 for k in range(2):
-    variable_list = [data_list[i][k] for i in range(1,l)]
+    variable_list = [data_list[i][k] for i in range(l)]
     unique_list = sorted(set(variable_list))
     counts_type = [[variable_list.count(x), unique_list.index(x)] for x in unique_list]
     ranks = sorted(counts_type, reverse=True) #
