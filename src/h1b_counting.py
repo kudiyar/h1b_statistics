@@ -43,6 +43,8 @@ for k in range(2):
         while ranks[r][0] == ranks_top10[9][0]:
             ranks_top10.append(counts_type[r])
             r += 1
+    else:
+        ranks_top10 = ranks
     # write top 10 occupations to a file.
     if k == 0:
         file1 = open(str(sys.argv[2]),"w") # open("./output/top_10_2016t_occupations.txt", "w")
