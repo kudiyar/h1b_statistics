@@ -20,7 +20,7 @@ status_ind = [headers.index(c) for c in status if c in headers][0] # Status inde
 j_ind = [headers.index(c) for c in soc_name if c in headers][0] # Job index
 state_ind = [headers.index(c) for c in job_state if c in headers][0] # State index
 # reading the rest of the file
-data_list = [] #[[job_title, job_state[0]]]
+data_list = [[job_title, job_state[0]]]
 for line in input_file:
     currentline = line.split(";")
     # We will filter only applications which was certified 
