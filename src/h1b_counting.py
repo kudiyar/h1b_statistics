@@ -52,6 +52,6 @@ for k in range(2):
     else:
         file1 = open(str(sys.argv[3]),"w") # open("./output/top_10_2016t_states.txt", "w") 
         L = ["TOP_STATES;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE\n"]
-    L += [unique_list[i[1]] + ";" + str(i[0]) + ";" + str(round(i[0]*100/(l-1), 2))+"%\n" for i in ranks_top10]
+    L += [unique_list[i[1]] + ";" + str(i[0]) + ";" + str(round(i[0]*100/(l), 2))+"%\n" for i in ranks_top10]
     file1.writelines(L) 
     file1.close()
