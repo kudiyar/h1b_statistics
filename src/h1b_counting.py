@@ -33,15 +33,15 @@ l = len(data_list)
 # we will work to get top occupations
 for k in range(2):
     variable_list = [data_list[i][k] for i in range(l)]
-    unique_list = sorted(set(variable_list), reverse=True)
+    unique_list = sorted(set(variable_list), reverse=True) # list(set(variable_list)) from last letter to first
     counts_type = [[variable_list.count(x), unique_list.index(x)] for x in unique_list]
-    ranks = sorted(counts_type, reverse=True)
+    ranks = sorted(counts_type, reverse=True) # x3 = [[2,4], [2,3], [2,8], [9,2]] sorted(x3, reverse=True)
     r = 10
     if len(ranks) > r:
-        ranks_top10 = ranks[0:10]
+        ranks_top10 = ranks[0:r]
         # add if there multiple 10th rank
-        while ranks[r][0] == ranks_top10[9][0]:
-            ranks_top10.append(counts_type[r])
+        while ranks[r][0] == ranks_top10[r-1][0]:
+            ranks_top10.append(ranks[r])
             r += 1
     else:
         ranks_top10 = ranks
